@@ -1,0 +1,19 @@
+<template>
+    <template if:true={contactPrimary.data}>
+        <template for:each={contactPrimary.data} for:item="contact">
+            <lightning-card title="Primary Contact" icon-name="standard:employee_organization" key={contact.Id}>
+                <div class="slds-m-horizontal_medium">
+                    <lightning-avatar variant="circle" src="https://www.lightningdesignsystem.com/assets/images/avatar1.jpg" initials="AW" fallback-icon-name="standard:person_account" alternative-text="Amy Weaver" class="slds-m-right_small"></lightning-avatar>
+                    <p>{contact.FirstName} {contact.LastName}</p>
+                    <p>{contact.Title}</p>
+                    <p>{contact.Description}</p>
+                    <p><lightning-formatted-email value={contact.Email} ></lightning-formatted-email></p>
+                    <p></lightning-icon><lightning-formatted-phone value={contact.Phone} ></lightning-formatted-phone></p>
+                    <p></lightning-icon><lightning-formatted-phone value={contact.HQ_Phone__c} ></lightning-formatted-phone></p>
+                </div>
+                <div slot="footer">
+                </div>
+            </lightning-card>
+        </template>
+    </template>
+</template>

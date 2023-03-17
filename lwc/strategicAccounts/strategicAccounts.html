@@ -1,0 +1,254 @@
+<template>
+  <div class="slds-m-bottom_medium">
+   <h2 id="element-with-table-label" class="slds-text-heading_medium slds-m-bottom_xx-small">Strategic Accounts</h2>
+<h3 id="other-element-with-table-label" class="slds-text-title slds-m-bottom_small">Select an account to see details</h3>
+
+  <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label" style="max-width: 900px;">
+   <thead>
+     <tr class="slds-line-height_reset">
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Opportunity Name">Account Name</div>
+       </th>
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Account Name">Phone</div>
+       </th>
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Close Date">Address</div>
+       </th>
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Stage">No. of Employees</div>
+       </th>
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Confidence">Industry</div>
+       </th>
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Amount">No. of Offices</div>
+       </th>
+       <th class="" scope="col">
+         <div class="slds-truncate" title="Contact">No. of Employees in Each Office
+         </div>
+       </th>
+       
+       
+      <th class="" scope="col">
+        <div class="slds-truncate" title="">Payroll Provider
+        </div>
+      </th>
+      
+      
+      <th class="" scope="col">
+        <div class="slds-truncate" title="">Broker
+        </div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="">Contact Above or Below Them
+        </div>
+      </th>
+
+     </tr>
+   </thead>
+   <tbody>
+     <tr class="slds-hint-parent">
+       <th data-label="Account Name" scope="row">
+         <div class="slds-truncate" title="Account Detail">
+          <lightning-button variant="base" label={name1} title="View Account" onclick={navigateToObjectHome}></lightning-button>
+           <!--<a href="https://edenredus--edendev1.sandbox.lightning.force.com/lightning/r/Account/{name1}/view" tabindex="-1">{name1}</a>-->
+         </div>
+       </th>
+       <td data-label="Phone">
+         <div class="slds-truncate" title={phone1}>{phone1}</div>
+       </td>
+       <td data-label="Close Date">
+         <div class="slds-truncate" title="4/14/2015">{street1}, {city1}, {state1}, {postal1}, {country1} </div>
+       </td>
+       <td data-label="Prospecting">
+         <div class="slds-truncate" title="Prospecting">{employees1}</div>
+       </td>
+       <td data-label="Confidence">
+         <div class="slds-truncate" title="20%">{industry1}</div>
+       </td>
+       <td data-label="Amount">
+         <div class="slds-truncate" title="$25k">{offices1}</div>
+       </td>
+       <td data-label="Contact">
+         <div class="slds-truncate" title="">{employeeoffice1}</div>
+       </td>
+       
+     
+       <td data-label="">
+        <div class="slds-truncate" title="">{payroll1}</div>
+       </td>
+       
+       
+       <td data-label="">
+        <div class="slds-truncate" title="">{broker1}</div>
+       </td>
+       <td data-label="">
+        <div class="slds-truncate" title="">{contact1}</div>
+       </td>
+
+     </tr>
+     
+   </tbody>
+ </table>
+
+<!-- compelte table with all fields -->
+
+ <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label" style="max-width: 900px;">
+  <thead>
+    <tr class="slds-line-height_reset">
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Opportunity Name">Account Name</div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Account Name">Phone</div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Close Date">Address</div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Stage">No. of Employees</div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Confidence">Industry</div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Amount">No. of Offices</div>
+      </th>
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Contact">No. of Employees in Each Office
+        </div>
+      </th>
+      
+      <th class="" scope="col">
+       <div class="slds-truncate" title="">Office Locations
+       </div>
+      </th>
+      <th class="" scope="col">
+       <div class="slds-truncate" title="">Metro Areas
+       </div>
+     </th>
+     <th class="" scope="col">
+       <div class="slds-truncate" title="">Payroll Provider
+       </div>
+     </th>
+     <th class="" scope="col">
+       <div class="slds-truncate" title="">Benefits Provided
+       </div>
+     </th>
+     <th class="" scope="col">
+       <div class="slds-truncate" title="">Benefit Suppliers
+       </div>
+     </th>
+     <th class="" scope="col">
+       <div class="slds-truncate" title="">Broker
+       </div>
+     </th>
+     <th class="" scope="col">
+       <div class="slds-truncate" title="">Contact Above or Below Them
+       </div>
+     </th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="slds-hint-parent">
+      <th data-label="Account Name" scope="row">
+        <div class="slds-truncate" title="Cloudhub">
+          <a href="https://edenredus--edendev1.sandbox.lightning.force.com/lightning/r/Account/{name1}/view" tabindex="-1">{name1}</a>
+        </div>
+      </th>
+      <td data-label="Phone">
+        <div class="slds-truncate" title={phone1}>{phone1}</div>
+      </td>
+      <td data-label="Close Date">
+        <div class="slds-truncate" title="4/14/2015">{street1}, {city1}, {state1}, {postal1}, {country1} </div>
+      </td>
+      <td data-label="Prospecting">
+        <div class="slds-truncate" title="Prospecting">{employees1}</div>
+      </td>
+      <td data-label="Confidence">
+        <div class="slds-truncate" title="20%">{industry1}</div>
+      </td>
+      <td data-label="Amount">
+        <div class="slds-truncate" title="$25k">{offices1}</div>
+      </td>
+      <td data-label="Contact">
+        <div class="slds-truncate" title="">{employeeoffice1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{locations1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{metroareas1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{payroll1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{benefits1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{suppliers1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{broker1}</div>
+      </td>
+      <td data-label="">
+       <div class="slds-truncate" title="">{contact1}</div>
+      </td>
+
+    </tr>
+    
+  </tbody>
+</table>
+
+
+   <p>Company name from Account: {allaccount1}</p>
+   <!--<p>{wiredRecords}</p>-->
+   <div class="slds-m-bottom_medium">
+    <lightning-card title="Strategic Accounts" icon-name="standard:user">
+      <div class="slds-m-around_medium">
+        <img style="max-height: 400px" alt="Image on T.O." src={logo1}/>
+        <p>Account Name : {name1}</p>
+        <p>Phone : {phone1}</p>
+        <p>Street : {street1}</p>
+        <p>City : {city1}</p>
+        <p>State : {state1}</p>
+        <p>Postal Code : {postal1}</p>
+        <p>Country : {country1}</p>
+        <p>No. of Employees : {employees1}</p>
+        <p>Industry : {industry1}</p>
+        <p>No. of Offices : {offices1}</p>
+        <p>Employees per office : {employeeoffice1}</p>
+        <p>Locations : {locations1}</p>
+        <p>Metro areas : {metroareas1}</p>
+        <p>Payroll : {payroll1}</p>
+        <p>Benefits : {benefits1}</p>
+        <p>Suppliers : {suppliers1}</p>
+        <p>Broker : {broker1}</p>
+        <p>Contact : {contact1}</p>
+      </div>
+    </lightning-card>
+   </div>
+   <p>{id1}</p>
+   <p>{name1}</p>
+   <p>{phone1}</p>
+   <p>{street1}</p>
+   <p>{city1}</p>
+   <p>{state1}</p>
+   <p>{postal1}</p>
+   <p>{country1}</p>
+   <p>{employees1}</p>
+   <p>{industry1}</p>
+   <p>{offices1}</p>
+   <p>{employeeoffice1}</p>
+   <p>{locations1}</p>
+   <p>{metroareas1}</p>
+   <p>{payroll1}</p>
+   <p>{benefits1}</p>
+   <p>{suppliers1}</p>
+   <p>{broker1}</p>
+   <p>{contact1}</p>
+  </div>
+</template>

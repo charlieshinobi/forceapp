@@ -1,0 +1,72 @@
+<template>
+    <div class="slds-grid slds-wrap slds-align_absolute-center">
+       
+                <div class="slds-size_4-of-4 slds-var-m-around_small">
+                    <lightning-card title={name} icon-name="standard:account">
+                        
+                        <!-- body start -->
+                        <div class="slds-box slds-m-horizontal_xx-large">
+                            
+                            <div class="slds-m-horizontal_x-small">
+                                <p><b>Description:</b> {description}</p>
+                                <p><b>President: </b> {president}</p>
+                                <p><b>Subsidiaries: </b> {subsidiary}</p><br>
+
+                            <p><b>Account ID:</b> {recordId}</p>
+                            <p><b>Opportunities: </b></p>
+                            <p><b>Offer Commuter: </b> {commuter}</p><br>
+                            </div>
+                            <dl class="slds-dl_horizontal slds-m-horizontal_x-small">
+                                <dt class="slds-dl_horizontal__label"><b>Owner:</b></dt>
+                                <dd class="slds-dl_horizontal__detail">{owner}</dd>
+                                <dt class="slds-dl_horizontal__label"><b>Current Broker:</b></dt>
+                                <dd class="slds-dl_horizontal__detail">{broker}</dd>
+                                <dt class="slds-dl_horizontal__label"><b>No. Employees:</b></dt>
+                                <dd class="slds-dl_horizontal__detail"><lightning-formatted-number value={employees}></lightning-formatted-number></dd>
+                                <dt class="slds-dl_horizontal__label"><b>No. of Offices:</b></dt>
+                                <dd class="slds-dl_horizontal__detail">{offices}</dd>
+                                <dt class="slds-dl_horizontal__label"><b>No. of employees in Each Office:</b></dt>
+                                <dd class="slds-dl_horizontal__detail">{employeeoffice}</dd>
+                                <dt class="slds-dl_horizontal__label"><b>Industry:</b></dt>
+                                <dd class="slds-dl_horizontal__detail">{industry}</dd>
+                                <dt class="slds-dl_horizontal__label"><b>Phone:</b></dt>
+                                <dd class="slds-dl_horizontal__detail"><lightning-formatted-phone value={phone} ></lightning-formatted-phone>
+                                </dd>
+                                <dt class="slds-dl_horizontal__label"><b>Address:</b></dt>
+                                <dd class="slds-dl_horizontal__detail"><lightning-formatted-address
+                                    street={street}
+                                    city={city}
+                                    country={country}
+                                    province={state}
+                                    postal-code={postal}
+                                ></lightning-formatted-address>
+                                </dd>
+                                <dt class="slds-dl_horizontal__label"><b>Website:</b></dt>
+                                <dd class="slds-dl_horizontal__detail"><lightning-formatted-url value={website} tooltip={name} target="_blank"></lightning-formatted-url></dd>
+                            </dl>
+
+                            <div class="slds-m-horizontal_x-small">
+                                <br>
+                                <p><b>Office Location: </b>{locations}</p>
+                                <p><b>Metro Areas: </b>{metroareas}</p>
+                                <p><b>Payroll Provider: </b>{payroll}</p>
+                                <p><b>Benefits Provided: </b>{benefits}</p>
+                                <p><b>Benefit Suppliers: </b>{suppliers}</p>
+                                <p><b>Contact Above or Below: </b>{contact}</p>
+                                <br>
+                            </div> 
+                            <div slot="footer" class="slds-m-horizontal_x-small">
+                                <p><b>Strategy Summary: </b>{summary}</p>
+                                <p><b>Short term objective: </b>{objective}</p>
+                            </div>
+                        </div>
+                        <div class="slds-box slds-m-horizontal_xx-large">
+                            <c-strategic-primary-contact
+                                idcontact={primarycontact}
+                                data-idcontact={primarycontact}>        
+                            </c-strategic-primary-contact>
+                        </div>
+                    </lightning-card>
+                </div>  
+    </div>
+</template>

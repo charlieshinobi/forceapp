@@ -1,0 +1,55 @@
+<template>
+    <div>
+        <a href={url} onclick={handleClick}>Account Home</a>
+    </div>
+    <lightning-card title="Strategic Accounts" icon-name="standard:account">
+        <template if:true={availableAccounts}>
+            <lightning-datatable
+                key-field="Id"
+                data={availableAccounts}
+                columns={columns}
+            >
+           </lightning-datatable>
+        </template>
+        <template if:true={error}>
+            {error}
+        </template>
+    </lightning-card>
+    <lightning-card title="Account" icon-name="standard:account">
+        <div class="slds-card__body_inner">
+    
+            <template if:true={accounts.data}>
+                <table class="slds-table slds-table_fixed-layout slds-table_bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="" scope="col">
+                                <div class="slds-truncate" title="Name">Name</div>
+                            </th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={accounts.data} for:item="a">
+                            <tr class="slds-hint-parent" key={a.Id}>
+                                <th data-label="Name" scope="row" class="slds-truncate">
+                                    <lightning-button-icon icon-name="utility:search" variant="bare"
+                                        alternative-text="Open record" onclick={viewAccount} value={a.Id}>
+                                    </lightning-button-icon>
+                                    <a onclick={viewAccount2} title="View Account 2" data-id={a.Id}
+                                        target="_blank">{a.Name}</a>    
+                                        <a onclick={viewAccount3} title="View Account 3" data-id={a.Id}
+                                        target="_blank">{a.Name}</a>
+                                </th>
+                                
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+    
+            </template>
+    
+           
+    
+        </div>
+    </lightning-card>
+</template>
